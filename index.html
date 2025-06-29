@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FURKAN KARAARSLAN</title>
+  <link rel="icon" type="png" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&family=Urbanist:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #8ecb00;
+      --bg-dark: #121212;
+      --font-primary: 'DM Mono', monospace;
+      --font-secondary: 'Urbanist', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-dark);
+      color: white;
+      font-family: var(--font-primary);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1a1a1a;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-family: var(--font-secondary);
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .typewriter h1 {
+      font-size: 2.5rem;
+      font-family: var(--font-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--primary-color);
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 1s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .btn {
+      background: var(--primary-color);
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-family: var(--font-secondary);
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: scale(1.05) translateY(-2px);
+      background: #aaff00;
+      box-shadow: 0 4px 12px rgba(142, 203, 0, 0.4);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: var(--font-secondary);
+      font-size: 2rem;
+      color: var(--primary-color);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">FURKAN KARAARSLAN</div>
+    <nav>
+      <a href="https://nday.blog" target="_blank">N-Day Blog</a>
+      <a href="https://byresearchers.net" target="_blank">ByResearchers Blog</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <div class="typewriter">
+      <h1>Hello, I’m a Vulnerability Researcher</h1>
+    </div>
+    <p style="margin-top: 20px;">I focus on offensive security, red team operations, and adversary emulation to uncover real-world threats.</p><br>
+    <a href="https://www.linkedin.com/in/furkan-k/" style="text-decoration: none;" target="_blank" class="btn">View My Profile</a>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">Web Application Security</div>
+      <div class="card">Mobile Application Security</div>
+      <div class="card">API Security</div>
+      <div class="card">Network Security</div>
+      <div class="card">Cloud Security</div>
+      <div class="card">Exploit Development</div>
+      <div class="card">Wireless Security</div>
+      <div class="card">Python & PHP</div>
+    </div>
+  </section>
+
+
+<section id="certificates" style="padding: 40px 20px; background-color: #1a1a1a; color: white; font-family: 'Urbanist', sans-serif;">
+  <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem; color: #8ecb00;">Certificates</h2>
+
+  <div class="cert-slider-container">
+    <div class="cert-slider-track">
+
+      <!-- Cert 1 -->
+      <div class="cert-card">
+        <div class="cert-img">
+          <img src="https://raw.githubusercontent.com/furkan1x337/CERT/refs/heads/main/8hxhqc1a_1745923856498.png" alt="eWPTX">
+         </div>
+          <div class="cert-info">
+            <h3>Web application Penetration Tester eXtreme (eWPTX)</h3>
+            <p>Category: Web Application Security</p>
+            <p>Issuer: INE</p>
+            <p>Date: 2024-05</p>
+            <div class="cert-buttons">
+              <a href="https://www.credential.net/45fb32b2-ea45-4a50-b919-6449c743848c" target="_blank" class="cert-btn">Verify</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cert 2 -->
+      <div class="cert-card">
+        <div class="cert-img">
+          <img src="https://raw.githubusercontent.com/furkan1x337/CERT/refs/heads/main/225yuk7g_1751136032578.png" alt="eMAPT">
+         </div>
+          <div class="cert-info">
+            <h3>Mobile Application Penetration Tester (eMAPT)</h3>
+            <p>Category: Mobile Application Security</p>
+            <p>Issuer: INE</p>
+            <p>Date: 2025-07</p>
+            <div class="cert-buttons">
+              <a href="https://www.credential.net/3c26c49a-a85e-4bc5-91d3-7f6fa1de6dcc" target="_blank" class="cert-btn">Verify</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cert 3 -->
+      <div class="cert-card">
+        <div class="cert-img">
+          <img src="https://raw.githubusercontent.com/furkan1x337/CERT/refs/heads/main/4pvt634w_1747660913467.png" alt="CRTP">
+         </div>
+          <div class="cert-info">
+            <h3>Certified Red Team Professional (CRTP)</h3>
+            <p>Category: Active Directory Security</p>
+            <p>Issuer: Altered Security</p>
+            <p>Date: 2025-03</p>
+            <div class="cert-buttons">
+              <a href="https://www.credential.net/e8c9f518-61cd-4a05-9e00-8f0f2c6f08bd" target="_blank" class="cert-btn">Verify</a>
+          </div>
+        </div>
+      </div>
+
+            <!-- Cert 4 -->
+      <div class="cert-card">
+        <div class="cert-img">
+          <img src="https://raw.githubusercontent.com/furkan1x337/CERT/refs/heads/main/FURKANKARAARSLAN-CertifiedAppSecPentestingeXpert(CAPenX)%20(1).png" alt="CAPenX">
+         </div>
+          <div class="cert-info">
+            <h3>Certified AppSec Pentesting eXpert (CAPenX)</h3>
+            <p>Category: Application Security</p>
+            <p>Issuer: The SecOps Group</p>
+            <p>Date: 2025-03</p>
+            <div class="cert-buttons">
+              <a href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXbzQ10oPlJHN92QRo+puyAldkwUXtwSyplaiSRi+YhGF5Q/f8U8Gy6s2me22jA/um637/usaSFKjRre5FA8sjK8=" target="_blank" class="cert-btn">Verify</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.cert-slider-container {
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cert-slider-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.cert-card {
+  flex: 0 0 100%;
+  display: flex;
+  background: #181818;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin: 0 10px;
+}
+
+.cert-img {
+  flex: 1;
+}
+
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-info {
+  flex: 2;
+  padding: 20px;
+}
+
+.cert-info h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.cert-info p {
+  margin: 6px 0;
+  color: #ccc;
+}
+
+.cert-buttons {
+  margin-top: 10px;
+}
+
+.cert-btn {
+  display: inline-block;
+  background: #8ecb00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.cert-btn:hover {
+  background: #aaff00;
+  transform: scale(1.05);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let currentSlide = 0;
+  const track = document.querySelector('.cert-slider-track');
+  const slides = document.querySelectorAll('.cert-card');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    const offset = -index * 100;
+    track.style.transform = `translateX(${offset}%)`;
+  }
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }, 5000);
+});
+</script>
+
+
+
+
+  <section id="blog">
+    <h2>Recent Blog Posts</h2>
+    <div class="grid">
+      <div class="card"><a href="https://www.byresearchers.net/2025/05/cve-2025-2421-sambabox-51-remote-code.html" target="_blank" style="display: inline-block; text-decoration: none; color: inherit;">
+        <h3>CVE-2025-2421 SambaBox < 5.1 Remote Code Execution [TR]</h3>
+        <p>SambaBox 5.1 sürümünden önceki versiyonlarda bulunan NTP yönetimi bileşeninde keşfedilmiştir. Sunucu ekleme işlemi sırasında kullanılan timezone parametresi, uygun bir filtreleme veya doğrulama sürecine tabi tutulmadan doğrudan sistem komutlarına dahil edilmektedir.</p>
+      </a></div>
+      <div class="card"><a href="https://www.nday.blog/exploit-development/exp-101-8-stack-based-overflow-nedir/" target="_blank" style="display: inline-block; text-decoration: none; color: inherit;">
+        <h3>EXP-101: 8-Stack Based Overflow Nedir?</h3>
+        <p>Stack Overflow, yazılım hatalarından biridir ve bir buffer’ın (arabellek) kapasitesinden daha fazla veri yazılması ile meydana gelir. Bu taşma, stack (yığın) üzerindeki bellek alanlarının ezilmesine, hatta geri dönüş adresinin (return address) bozulmasına neden olur.</p>
+      </a></div>
+    </div>
+  </section>
+
+<footer style="text-align: center; padding: 30px 20px; font-size: 0.9rem; color: #888; background-color: #111; font-family: 'Urbanist', sans-serif;">
+    © 2025 Furkan Karaarslan | All Rights Reserved
+</footer>
+
+</body>
+</html>
