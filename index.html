@@ -266,7 +266,39 @@ h2 {
     padding: 40px 16px;
   }
 }
+  #cve-hall-of-fame {
+    padding: 50px 10px;
+    background-color: #121212;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+  }
+  #cve-hall-of-fame h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #8ecb00;
+  }
 
+  #marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 50px;
+    border: 2px solid #8ecb00;
+
+    display: flex;
+    align-items: center;
+  }
+  #marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: white;
+  }
+
+  #marquee-content span {
+    margin-right: 60px;
+  }
   </style>
 </head>
 <body>
@@ -395,7 +427,47 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
+<section id="cve-hall-of-fame">
+  <h2>CVE Disclosures & Hall of Fame</h2>
 
+  <div id="marquee-container">
+    <div id="marquee-content">
+      <span>📌 CVE-2025-2421 – SambaBox &lt; 5.1 (Remote Code Execution)</span>
+      <span>📌 CVE-2025-1035 – KLog Server &lt; 3.1 (Path Traversal)</span>
+      <span>📌 CVE-2024-7349 – LifterLMS &lt;= 7.7.5 (SQL Injection)</span>
+      <span>📌 Dolibarr v17.0.1 – Stored XSS</span>
+      <span>🏆 United Nations Hall of Fame</span>
+      <span>🏆 NASA Hall of Fame</span>
+      <span>🏆 Sony Hall of Fame</span>
+      <span>🏆 European Union Hall of Fame</span>
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+<script>
+  const container = document.getElementById('marquee-container');
+  const content = document.getElementById('marquee-content');
+
+  content.innerHTML += content.innerHTML;
+
+  let pos = 0;
+  const speed = 1;
+
+  function step() {
+    pos -= speed;
+    if (pos <= -content.offsetWidth / 2) {
+      pos = 0;
+    }
+    content.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(step);
+  }
+
+  step();
+</script>
 
   <section id="blog">
     <h2>Recent Blog Posts</h2>
