@@ -7,132 +7,265 @@
   <link rel="icon" type="png" href="icon.png">
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;500&family=Urbanist:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #8ecb00;
-      --bg-dark: #121212;
-      --font-primary: 'DM Mono', monospace;
-      --font-secondary: 'Urbanist', sans-serif;
-    }
+:root {
+  --primary-color: #8ecb00;
+  --bg-dark: #121212;
+  --font-primary: 'DM Mono', monospace;
+  --font-secondary: 'Urbanist', sans-serif;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      background: var(--bg-dark);
-      color: white;
-      font-family: var(--font-primary);
-    }
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  color: white;
+  font-family: var(--font-primary);
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #1a1a1a;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+}
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--primary-color);
-    }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
 
-    nav a {
-      color: #ddd;
-      text-decoration: none;
-      margin-left: 20px;
-      font-family: var(--font-secondary);
-      position: relative;
-    }
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 20px;
+  font-family: var(--font-secondary);
+  position: relative;
+}
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: var(--primary-color);
-      transition: width 0.3s ease;
-    }
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+nav a:hover::after {
+  width: 100%;
+}
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-    }
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
 
-    .typewriter h1 {
-      font-size: 2.5rem;
-      font-family: var(--font-secondary);
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid var(--primary-color);
-      width: 0;
-      animation: typing 4s steps(40, end) forwards, blink 1s step-end infinite;
-    }
+.typewriter h1 {
+  font-size: 2.5rem;
+  font-family: var(--font-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 1s step-end infinite;
+}
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
+@keyframes blink {
+  50% { border-color: transparent }
+}
 
-    .btn {
-      background: var(--primary-color);
-      color: black;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-family: var(--font-secondary);
-      cursor: pointer;
-      margin: 10px;
-      transition: all 0.3s ease-in-out;
-    }
+.btn {
+  background: var(--primary-color);
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: var(--font-secondary);
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
 
-    .btn:hover {
-      transform: scale(1.05) translateY(-2px);
-      background: #aaff00;
-      box-shadow: 0 4px 12px rgba(142, 203, 0, 0.4);
-    }
+.btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  background: #aaff00;
+  box-shadow: 0 4px 12px rgba(142, 203, 0, 0.4);
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-    h2 {
-      font-family: var(--font-secondary);
-      font-size: 2rem;
-      color: var(--primary-color);
-    }
+h2 {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  color: var(--primary-color);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .card {
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
+.card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
 
-    .card:hover {
-      transform: scale(1.03);
-    }
+.card:hover {
+  transform: scale(1.03);
+}
+
+.cert-slider-container {
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cert-slider-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.cert-card {
+  flex: 0 0 100%;
+  display: flex;
+  background: #181818;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin: 0 10px;
+}
+
+.cert-img {
+  flex: 1;
+}
+
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-info {
+  flex: 2;
+  padding: 20px;
+}
+
+.cert-info h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.cert-info p {
+  margin: 6px 0;
+  color: #ccc;
+}
+
+.cert-buttons {
+  margin-top: 10px;
+}
+
+.cert-btn {
+  display: inline-block;
+  background: #8ecb00;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-right: 10px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.cert-btn:hover {
+  background: #aaff00;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    margin: 5px 10px 0 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .typewriter h1 {
+    font-size: 1.6rem;
+    white-space: normal;
+    overflow: visible;
+    width: auto;
+    border-right: none;
+    animation: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .cert-img,
+  .cert-info {
+    width: 100%;
+    flex: none;
+  }
+
+  .cert-img img {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .cert-info {
+    padding: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 40px 16px;
+  }
+}
 
   </style>
 </head>
@@ -241,77 +374,6 @@
     </div>
   </div>
 </section>
-
-<style>
-.cert-slider-container {
-  width: 100%;
-  max-width: 1000px;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-}
-
-.cert-slider-track {
-  display: flex;
-  transition: transform 0.8s ease-in-out;
-}
-
-.cert-card {
-  flex: 0 0 100%;
-  display: flex;
-  background: #181818;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  margin: 0 10px;
-}
-
-.cert-img {
-  flex: 1;
-}
-
-.cert-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.cert-info {
-  flex: 2;
-  padding: 20px;
-}
-
-.cert-info h3 {
-  margin: 0;
-  color: #fff;
-}
-
-.cert-info p {
-  margin: 6px 0;
-  color: #ccc;
-}
-
-.cert-buttons {
-  margin-top: 10px;
-}
-
-.cert-btn {
-  display: inline-block;
-  background: #8ecb00;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 6px;
-  margin-right: 10px;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.cert-btn:hover {
-  background: #aaff00;
-  transform: scale(1.05);
-}
-</style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
